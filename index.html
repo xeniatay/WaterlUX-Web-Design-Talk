@@ -1,52 +1,361 @@
 <!doctype html>
-<html>
+<html lang="en">
+
 	<head>
-
 		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="chrome=1">
-		<title>reveal.js - The HTML Presentations Framework</title>
 
-		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/main.css">
+		<title>I want a Site - Web Design with Xenia</title>
 
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="description" content="WaterlUX Web Design Talk in Spring 2014">
+		<meta name="author" content="Xenia Tay">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
 
 		<!--[if lt IE 9]>
-		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
-
 	</head>
+
 	<body>
-		<div class="wrapper">
 
-			<header>
+		<div class="reveal">
 
-				<h1>reveal.js</h1>
-				<p>
-					The HTML Presentation Framework &mdash; Site coming soon
-				</p>
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>I want a site</h1>
+					<aside class="notes">
+						Hi!!! Welcome to the first meeting of WaterlUX.<br>
+						I'm Xenia, and today, I'll be talking about how to set up your own basic site from start to end.<br>
+						I will be exploring options you have - based on:<br>
+						- How much you want to pay<br>
+						- How much dev freedom you want to have
+					</aside>
+				</section>
 
-			</header>
+				<section>
+					<p>(づ｡◕‿‿◕｡)づ</p>
+					<aside class="notes">
+						A little bit about me for context:<br>
+						I'm in 4th year CS, with a minor in Fine Arts.<br>
+						I've previously done 5 co-op terms in web development, and built countless side-project websites, including Velocity, Math Orientation, CUSEC 2014.<br>
+					</aside>
+				</section>
+				<section>
+					<h2>Disclaimer</h2>
+					<blockquote class="fragment">"I don't know what I don't know."</blockquote>
+					<aside class="notes">
+						The information I'm about to present is from pure personal experience<br>
+						Through side projects, word of mouth, co-ops (startups - closer to the deployment process).<br>
+						This is all googleable, but oftentimes people don't know where to start.<br>
+						"I don't know what I don't know" - now you will know :)<br>
+					</aside>
+				</section>
 
-			<footer>
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h1>A Basic Site</h1>
+						<aside class="notes">
+							So - what makes up a basic site?
+						</aside>
+					</section>
+					<section>
+						<h1>1. Domain</h1>
+						<aside class="notes">
+							You have your domain: web URl.<br>
+								- Most people have firstname-lastname.com<br>
+								- xeniatay.com, xtay.me<br>
+						</aside>
+					</section>
+					<section>
+						<h1>2. Hosting</h1>
+						<aside class="notes">
+							Hosting: where all of your data is stored<br>
+						</aside>
+					</section>
+					<section>
+						<h1>3. Look and Feel</h1>
+						<aside class="notes">
+							Look and Feel: most exciting part for most people, but also the most time consuming.<br>
+							So these three things make up a basic site. <br>
+							And now, we will drill down on the domain. One of the biggest concerns with buying a domain:<br>
+						</aside>
+					</section>
+				</section>
 
-				<p>
-					<a href="http://lab.hakim.se/reveal-js">Try the demo</a>
-					<a href="https://github.com/hakimel/reveal.js/releases">Download</a>
-				</p>
+				<section>
+					<section>
+						<h1>$_$</h1>
+						<aside class="notes">
+							- Money<br>
+							So how much does a domain actually cost?
+					</section>
+					<section>
+						<img src="img/godaddy_domain.png">
+						<aside class="notes">
+							Well, I bought my first domain name for a hefty price of one dollar and forty-two cents.
+						</aside>
+					</section>
+					<section>
+						<img src="img/fbdotcom.png">
+						<aside class="notes">
+							However, Facebook paid a cool 8.5million dollars for Fb.com.
+						</aside>
+					</section>
+					<section>
+						<p>An average domain costs $10 - $15 a year</p>
+						<aside class="notes">
+							The truth is, an average domain costs $10 - $15 a year.
+						</aside>
+					</section>
+					<section>
+						<h1>GoDaddy?</h1>
+						<img class="fragment" src="img/godaddy_spam.png">
+						<aside class="notes">
+							I had gotten my first domain from GoDaddy at a steal - it was a crazy one-year deal, and was worth every cent.<br>
+							However, my experience with GoDaddy was less than ideal. <br>
+							It was messy, difficult to navigate, and they sent CRAZY amounts of spam. <br>
+							At one point, they called to ask about my experience.
+						</aside>
+					</section>
+					<section>
+						<h1>GoDaddy?</h1>
+						<img class="fragment" src="img/grumpycat.png">
+						<aside class="notes">
+							Eventually, when my one-year deal ran out, I switched to a different domain provider, also spurred by the huge SOPA scandal that GoDaddy had.
+						</aside>
+					</section>
+					<section>
+						<h1>Hover.com</h1>
+						<p class="fragment">10/10 highly recommend <br>ᕦ(ò_óˇ)ᕤ</p>
+						<aside class="notes">
+							And I am MUCH happier with life.<br>
+							Hover.com is AMAZING.<br>
+							Clean, sleek, they do not bombard you with aggressive emails every other day and are a dream to work with.<br>
+							They have really good documentation on how to link their domains up with other hosting providers, which is awesome!
+						</aside>
+					</section>
+					<section>
+						<h2>Acquiring a Domain</h2>
+						<ul>
+							<li>Sign up with a domain provider (Hover.com)</li>
+							<li>Pick a name</li>
+							<li>Check out and pay $$$</li>
+						</ul>
+						<aside class="notes">
+							So just to reiterate: here are the steps of getting your own domain:<br>
+							[read slides]
+						</aside>
+					</section>
+					<section>
+						<h1>Alternatives</h1>
+						<p class="fragment">(Free)</p>
+						<aside class="notes">
+							But here are some free options - they require even less effort and are customizable at the same time.
+					</section>
+					<section>
+						<ul>
+							<li><code>xeniatay.wordpress.com</code></li>
+							<li><code>xeniatay.tumblr.com</code></li>
+							<li>Github Pages:</li>
+							<code>xeniatay.github.io</code>
+							<code>xeniatay.github.io/WaterlUX-Web-Design-Talk</code>
+							<li class="fragment">
+								<strike>xanga, livejournal, myspace</strike>
+							</li>
+						</ul>
+						<aside class="notes">
+							These are pretty self explanatory - you always have the option of hosting your sites on Wordpress on Tumblr for free. GitHub Pages is a really good option if your site is versioned on Github anyway.
+						</aside>
+					</section>
+				</section>
 
-			</footer>
+				<section>
+					<section>
+						<h2>Hosting</h2>
+						<aside class="notes">
+							There are a lot of different options for site hosting
+							Here are some of the more common services and some comparisons within each of them
+						</aside>
+					</section>
+					<section>
+						<h2>Shared Hosting</h2>
+						<aside class="notes">
+							Shared Hosting refers to a partition on a master web server. This means that you own a little slice of some company's server, but you do not have complete permissions and control over it.<br>
+
+							Many shared hosting services vary in features. Some of them may only allow basic file transfer through an FTP client, so you have to copy and paste from your local computer to the remote server.<br>
+
+							Other services might allow SSH access (pay extra?), or they might have Git pre-installed. This all depends on the individual service, and is rarely listed anywhere - you really have to start paying and using the server to figure out what you can and cannot do.<br>
+
+							The biggest problem with shared hosting is that you are never allowed sudo access. This makes it very difficult to install services or frameworks through the ssh terminal, so if you're looking to do that kind of stuff, shared hosting isn't for you.<br>
+
+							One thing shared hosting is really good for is installing basic CMS like Wordpress. Shared hosting may be restrictive, but they also provide pre-installed tools like CPanel, PHPMyAdmin, which are all services you can use to manage your database through their web application. This is good for people who don't want to fiddle with the command line.<br>
+						</aside>
+					</section>
+					<section>
+						<h2>Shared Hosting Examples</h2>
+						<ul>
+							<li>GoDaddy: <strike>$7.99</strike> $3.99/month <em>(sale right now!)</em></li>
+							<li>Lunarpages: $9/month + <em>extra for SSH and other features</em></li>
+							<li>Media Temple: $20/month, includes email forwarding etc.</li>
+							<li>Site5: $5 - $12/month</li>
+						</ul>
+						<aside class="notes">
+							So here are some examples of shared hosting services and their pricing plans. Again, it's pretty difficult to differentiate between them, but some important things are email aliases, SSH, price and web user interface.
+						</aside>
+					</section>
+					<section>
+						<h2>Dedicated Hosting</h2>
+						<aside class="notes">
+							Dedicated hosting is the level up from shared hosting. Dedicated hosting gives you complete freedom over your own server. This is suitable for people who are building richer web apps, with custom frameworks, databases, etc.<br>
+
+							It requires a lot of fiddling around with the command line and permissions, so is definitely not for people who aren't familiar with that. However, if you are, I highly recommend it, because it's about the same price and offers that much more flexibility.<br>
+
+							Here's an example to illustrate the difference between Shared and Dedicated hosting:
+						</aside>
+					</section>
+					<section>
+						<h3>Installing Wordpress on Shared Hosting</h3>
+						<ol>
+							<li>Download and upload Wordpress onto server (FTP)</li>
+							<li>Create a database and MySQL User through CPanel/PHPMyAdmin</li>
+							<li>Run Wordpress install by accessing site URL</li>
+						</ol>
+					</section>
+					<section>
+						<h3>Installing Wordpress on Dedicated Hosting</h3>
+						<p><em>Note: this is for a fresh server</em></p>
+						<ol>
+							<li>Configure Root Login</li>
+							<li>Configure SSH Access</li>
+							<li>Install LAMP (Linux, Apache, MySQL, PHP)</li>
+							<li>Set up phpMyAdmin</li>
+							<li>Download Wordpress onto server (wget)</li>
+							<li>Create a database and MySQL User</li>
+							<li>Run Wordpress install by accessing site URL</li>
+						</ol>
+					</section>
+					<section>
+						<h2>Dedicated Hosting examples</h2>
+						<ul>
+							<li>Digital Ocean: $5/month or $0.007/hour</li>
+							<li>Heroku: "scales with you", $0.05/dyno-hour</li>
+							<li>AWS: 1 year free!</li>
+							<li>Linode: $20/month</li>
+						<aside class="notes">
+							So if the previous example didn't scare you away, dedicated hosting is for you!<br>
+							Again, each different service has its own features and quirks, it's up to you to research and find the one that suits you best.<br>
+							I personally use Digital Ocean, and have used Heroku at work - both are pretty sweet to work with, after you get past the hassle of the initial setup.
+						</aside>
+					</section>
+					<section>
+						<h2>Alternatives</h2>
+						<ul class="fragment">
+							<li>Wordpress: $8/year</li>
+							<li>Tumblr: ~free~</li>
+							<li>Github Pages: ~free~</li>
+						</ul>
+						<p class="fragment"><em>For use with a custom domain</em></p>
+						<aside class="notes">
+							Of course, just like domains, hosting has free options too! These are for use with a custom domain, but are lot more restricted (no database, or stuck to WP).
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>Look and Feel</h1>
+						<aside class="notes">
+							And finally, we're on to look and feel.<br>
+							The most important thing about look and feel is that a lot of people, including myself, always have grand visions of their dream site and end up falling short.<br>
+							I always envision a blog, a portfolio, fancy online resume, slideshows and carousels and stff, custom animations.<br>
+							But the truth is a lot of this stuff is already built and available out there, and there's no point in inventing the wheel.<br>
+							I often find that it is a lot easier to design with content in mind, instead of laying out an amazing theme skeleton with nothing to fill it in.<br>
+							So that was just general advice regarding designing a site.
+						</aside>
+					</section>
+					<section>
+						<h2>Resources</h2>
+						<ul class="fragment">
+							<li>creativemarket.com</li>
+							<li>themeforest.net</li>
+							<li>Bootstrap, PureCSS, Skeleton, Foundation</li>
+							<li>SquareSpace: $8/month</li>
+						</ul>
+						<aside class="notes">
+							Because design is so subjective, I don't have any concrete examples for you. Instead, I have some resources that I think would be helpful, whether you are a novice developer or a super experienced frontend developer.<br>
+
+							creativemarket: example<br>
+							themeforest.net: example<br>
+							bootstrap etc: CUSTOMIZE IT<br>
+							squarespace: example<br>
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<p>ヽ(´ー｀)ノ</p>
+					<h1>End</h1>
+					<p>@xeniatay</p>
+				</section>
+
+			</div>
 
 		</div>
 
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
 
-		  ga('create', 'UA-43375306-1', 'revealjs.com');
-		  ga('send', 'pageview');
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
 		</script>
+
 	</body>
 </html>
